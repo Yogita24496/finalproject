@@ -12,6 +12,6 @@ jobs:
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
       - name: Build Docker image
-        run: docker build -f ./Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/weather-app:latest .
+        run: docker build -f ./Dockerfile -t ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest .
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/weather-app:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-react-app:latest
